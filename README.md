@@ -5,4 +5,4 @@ The purpose of Lab 3 is to investigate a theoretical mid-sized retail company th
 
 Migration strategies for each of the components of the system were then made to determine a plan for how these services can be migrated to the cloud, culminating in a migration plan that the company can employ to sucessfully migrate the services to the cloud while minimizing risk.
 
-These tasks help us to understand how cloud architectures can be used for existing businesses to decrease the over-head of the company, while providing all the benefits using cloud services offer.
+These tasks help us to conceptually understand how cloud architectures can be used for existing businesses to decrease the over-head of the company, while providing all the benefits using cloud services offer.
