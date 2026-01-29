@@ -9,12 +9,18 @@
 
 **File Storage**: The on-prem file storage solution can be replaced and migrated to a PaaS platform (ex: Azure Files). Migrating the a cloud based solution will remove the need overhead of managing a local file system while also providing built-in redundancy and scalability.
 
-**2**.
-Migrating the on-prem solutions to cloud-based solutions can be done stratigically in gradual steps via a hybrid approach to minimize the potential disturbances and pitfalls of attempting to switch over every component at once. 
+**2/3**.
+Migrating the on-prem solutions to cloud-based solutions can be done stratigically in gradual steps via a hybrid approach to minimize the potential disturbances and pitfalls of attempting to switch over every component at once. This approach can be used as migration plan for company to shift their services to the cloud.
 
 **Components that can be Fully Migrated Initially:**
-- **Web Application**: by initially migrating the web application to a PaaS platform, there will several immediet benefits for the company, such as built-in scaling, reduced infracture management, and high availbility. This is a fairly low risk change as the code base can remain largely unchanged, roll backs can be preformed if necessary, and the reduction of managing infracture should increase the ease of managing of the application.
-- **E-Mail Service**: migrating the e-mail service to a SaaS solution should be a simple and will provide the immediet benefit of reducing the over head of managing an on-prem service. The dependencies on the e-mail service from other services is likely low, meaning the migration should have minimal impact on the running of the application. This is a low risk change as it can be easily reverted while being set-up.
+
+- **Web Application**: initially migrating the web application by rehosting it to a PaaS platform, can provide several immediet benefits for the company, such as built-in scaling, reduced infracture management, and high availbility. This is a fairly low risk change as the code base can remain largely unchanged, roll backs can be preformed if necessary, and the reduction of managing infracture should increase the ease of managing of the application.
+
+- **E-Mail Service**: moving the e-mail service to a SaaS solution should be a simple and will provide the immediet benefit of reducing the over head of managing an on-prem service. The dependencies on the e-mail service from other services is likely low, meaning the change should have minimal impact on the running of the application. This is a low risk change as it can be easily reverted while being set-up.
+
 
 **Components that can be Migrated using a Hybrid Approach:**
-- **Database**: 
+
+- **Database**: since the database is likely tightly coupled to the application, initially moving it to a IaaS platform may prove prudent, as full control over the environment (i.e, OS) and the database (i.e, SQL version) can be retained. Immediet changes to the environment (i.e, moving to a PaaS platform) may require redesigns of the database to be compatible with the PaaS database solution, which may be more challenging and error prone than using a lift and shift approach to a IaaS platform.
+
+- **File Storage**: the file system can initially remain on-prem while other services are moved to cloud solutions, in order to reduce the impact of doing
